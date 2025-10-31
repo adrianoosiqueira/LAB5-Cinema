@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro de Sessões</title>
+</head>
+<body>
+  <h1>Cadastro de Sessões</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="cadastro-filmes.html">Cadastro de Filmes</a> |
+    <a href="cadastro-salas.html">Cadastro de Salas</a> |
+    <a href="venda-ingressos.html">Venda de Ingressos</a> |
+    <a href="sessoes.html">Listagem de Sessões</a>
+  </nav>
+
+  <form id="form-sessao">
+    <label>Filme:
+      <select id="selectFilme"></select>
+    </label><br>
+    <label>Sala:
+      <select id="selectSala"></select>
+    </label><br>
+    <label>Data e Hora: <input id="dataHora" type="datetime-local" required></label><br>
+    <label>Preço: <input id="preco" type="number" step="0.01" min="0" required></label><br>
+    <label>Idioma:
+      <select id="idioma">
+        <option value="Dublado">Dublado</option>
+        <option value="Legendado">Legendado</option>
+      </select>
+    </label><br>
+    <label>Formato:
+      <select id="formato">
+        <option value="2D">2D</option>
+        <option value="3D">3D</option>
+      </select>
+    </label><br>
+    <button type="submit">Salvar Sessão</button>
+  </form>
+
+  <h2>Sessões cadastradas</h2>
+  <ul id="lista-sessoes"></ul>
+
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/sessoes.js"></script>
+</body>
+</html>

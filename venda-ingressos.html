@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Venda de Ingressos</title>
+</head>
+<body>
+  <h1>Venda de Ingressos</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="cadastro-filmes.html">Cadastro de Filmes</a> |
+    <a href="cadastro-salas.html">Cadastro de Salas</a> |
+    <a href="cadastro-sessoes.html">Cadastro de Sessões</a> |
+    <a href="sessoes.html">Listagem de Sessões</a>
+  </nav>
+
+  <form id="form-ingresso">
+    <label>Sessão:
+      <select id="selectSessao"></select>
+    </label><br>
+    <label>Nome do Cliente: <input id="cliente" required></label><br>
+    <label>CPF: <input id="cpf" required></label><br>
+    <label>Assento (ex: A10): <input id="assento" required></label><br>
+    <label>Tipo de Pagamento:
+      <select id="pagamento">
+        <option>Cartão</option>
+        <option>Pix</option>
+        <option>Dinheiro</option>
+      </select>
+    </label><br>
+    <button type="submit">Confirmar Venda</button>
+  </form>
+
+  <h2>Vendas</h2>
+  <ul id="lista-ingressos"></ul>
+
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/ingressos.js"></script>
+</body>
+</html>
